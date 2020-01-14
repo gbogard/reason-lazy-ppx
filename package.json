@@ -1,0 +1,8 @@
+{
+  "name": "reason-lazy-ppx",
+  "version": "0.0.1",
+  "description": "A PPX that allows lazy loading of ReasonML modules",
+  "main": "index.js",
+  "author": "Guillaume Bogard<hey@guillaumebogard.dev>",
+  "license": "MIT"
+}
