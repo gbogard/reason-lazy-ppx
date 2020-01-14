@@ -1,8 +1,33 @@
 {
-  "name": "reason-lazy-ppx",
-  "version": "0.0.1",
-  "description": "A PPX that allows lazy loading of ReasonML modules",
+  "name": "bs-lazy-ppx",
+  "version": "0.1.0",
+  "description": "A ppx that enables lazy-loading modules",
   "main": "index.js",
-  "author": "Guillaume Bogard<hey@guillaumebogard.dev>",
-  "license": "MIT"
+  "scripts": {
+    "build-lib": "bsb -clean-world -make-world",
+    "watch": "bsb -clean-world -make-world -w",
+    "clean": "rm -rf lib && bsb -clean-world && rm -rf ppx_src/_esy",
+    "build-ppx": "cd ppx_src && esy",
+    "watch-ppx": "cd ppx_src && esy dune build -w",
+    "postinstall": "[ ! -f package-links.json ] || ppl link-file"
+  },
+  "files": [
+    "/bsconfig.json",
+    "/src",
+    "/ppx",
+    "/ppx-linux.exe",
+    "/ppx-osx.exe"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "_": [],
+  "peerDependencies": {
+    "bs-platform": "^6.0.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.4.9",
+    "bs-platform": "^7.0.1",
+    "esy": "0.5.8",
+    "jest": "^24.9.0"
+  }
 }

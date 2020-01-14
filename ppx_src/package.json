@@ -1,0 +1,16 @@
+{
+  "name": "bs-lazy-ppx",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "esy": {
+    "build": "dune build",
+    "release": { "bin": [ "Ppx_lazy" ] }
+  },
+  "devDependencies": {
+    "@esy-ocaml/reason": "^3.5.0",
+    "@opam/dune": "^1.11.0",
+    "@opam/ppx_tools_versioned": "5.2.3",
+    "ocaml": "~4.6.0"
+  }
+}
